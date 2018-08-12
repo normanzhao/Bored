@@ -3,7 +3,6 @@
 /*GameBoard*/
 .GameBoard{
     border: 7px solid #000000;
-    width: 25%;
     margin: 5% auto 0 auto;
     text-align: center;
     font-size: 18px;
@@ -12,5 +11,20 @@
 /*GameCells*/
 .GameCell{
     border: 3.5px solid #000000;
-    padding: 2.5%;
+    padding: 15%;
+}
+
+
+/*TileRack*/
+.TileRack{
+    border: 7px solid #000000;
+    margin: 5% auto 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*GameTile*/
+.GameTile{
+    border: 3.5px solid #000000;
+    padding: 3%;
 }
