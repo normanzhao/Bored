@@ -14,8 +14,10 @@ class GameCell extends Component {
 
     render(){
         return(
-            <td className="GameCell" id={this.props.id}>
-                {this.props.id}
+            <td>
+                <div className="GameCell" id={this.props.id} stackHeight={currentStates.length}>
+                    {this.props.id}
+                </div>
             </td>
         )
     }

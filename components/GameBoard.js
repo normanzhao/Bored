@@ -13,13 +13,12 @@ class GameBoard extends Component {
         }
     }
 
-    //renders the game board to the specified height and width
-    //can be overriden, but defaults to props
-    renderBoard(height = this.props.height, width = this.props.width){
+    //set game board to render to the specified height and width when GameBoard mounts
+    componentWillMount() {
         let boardCells = [];
-        for(var h = 0; h < height; h++){
+        for(var h = 0; h < this.props.height; h++){
             let cellRow = [];
-            for(var w = 0; w < width; w++){
+            for(var w = 0; w < this.props.width; w++){
                 cellRow.push(
                     <GameCell key={"" + h + w } id={"" + h + w } maxStates={this.props.maxStates}/>
                 )
@@ -27,10 +26,6 @@ class GameBoard extends Component {
             boardCells.push(<tr key={"row"+h}>{cellRow}</tr>)
         }
         this.setState({gameCells : boardCells})
-    };
-
-    componentDidMount() {
-        this.renderBoard();
     }
 
     render(){
