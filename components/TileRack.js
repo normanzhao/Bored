@@ -13,12 +13,16 @@ class TileRack extends Component {
         }
     }
 
+    dragStartSetData(e) {
+       e.dataTransfer.setData("Text", e.target.innerHTML);
+    }
+
     //push rack values recieved from props to state
     setTileValues(){
         let rack = [];
         this.setState({tileValues: this.props.tileValues})
         for(var i = 0; i < this.props.rackSize; i++){
-            rack.push(<td key={"tile"+i} className="GameTile">{this.state.tileValues[i]}</td>)
+            rack.push(<td key={"tile"+i} className="GameTile" draggable={true} onDrop={() => { return false; }} onDragStart={this.dragStartSetData}>{this.state.tileValues[i]}</td>)
         }
         this.setState({tileRack : rack})
     }

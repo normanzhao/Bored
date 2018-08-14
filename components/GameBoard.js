@@ -4,12 +4,13 @@ import './component-styles.css';
 
 //renders gameboard and keeps track of cell states
 //props: height, width, maxStates (max states to maintain)
-//state: gameCells (all GameCells)
+//state: gameCells (all GameCells), changeStack (maintains the changes to gameCells for this current turn)
 class GameBoard extends Component {
     constructor(props){
         super();
         this.state = {
-            gameCells: undefined
+            gameCells: undefined,
+            changeStack: []
         }
     }
 

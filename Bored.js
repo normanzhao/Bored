@@ -9,9 +9,25 @@ class Bored extends Component {
   constructor(props){
     super();
     this.state = {
-      GameCellState: 0,
+      GameCellState: [],
       TileManagerState: 0
     }
+  }
+
+  //initialize cell states before mounting
+  componentWillMount(){
+    let initState = [];
+    for(var h = 0; h < this.props.height; h++){
+      let row = []
+      row.length = this.props.width
+      initState.push(row)
+    }
+    this.setState({GameCellState: initState})
+  }
+
+  //change current cell state
+  changeCellState(){
+
   }
 
   render() {
