@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './component-styles.css';
+import {warn, warnString} from './constants';
 
 //a single game cell on the game board
 //props: current cell value, max stored states
@@ -18,10 +19,15 @@ class GameCell extends Component {
     drop(e) {
         if(this.state.currentStates.length < this.props.maxStates){
             let update = this.state.currentStates
-            update.push(e.dataTransfer.getData("Text"))
-            this.setState({currentStates:update});
+            let newState = e.dataTransfer.getData("Text");
+            let coords = this.props.id.split(" ");
+            update.push(newState)
+            this.props.changeCellState(coords[0], coords[1], newState);
+            this.setState({currentStates: update});
         }
-        
+        else if(warn){
+            alert(warnString)
+        }
     }
 
     //element default behavior is to prevent drops, this enables dropping by preventing default behavior

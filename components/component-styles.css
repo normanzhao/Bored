@@ -11,9 +11,9 @@
 /*GameCells*/
 .GameCell, .GameTile{
     border: 3.5px solid #000000;
-    min-width: 20px;
-    min-height: 20px;
-    padding: 7px;
+    min-width: 22.5px;
+    min-height: 22.5px;
+    padding: 5px;
 }
 
 

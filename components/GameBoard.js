@@ -21,7 +21,7 @@ class GameBoard extends Component {
             let cellRow = [];
             for(var w = 0; w < this.props.width; w++){
                 cellRow.push(
-                    <GameCell key={"" + h + w } id={"" + h + w } maxStates={this.props.maxStates}/>
+                    <GameCell key={w + " " + h} id={w + " " + h} maxStates={this.props.maxStates} changeCellState={this.props.changeCellState}/>
                 )
             }
             boardCells.push(<tr key={"row"+h}>{cellRow}</tr>)
