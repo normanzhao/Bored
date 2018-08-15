@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import TileTracker from './TileTracker';
 import TileRack from './TileRack';
 import './component-styles.css';
 
@@ -13,7 +14,7 @@ class TileManager extends Component {
             tilesLeft: 0
         }
     }
-
+    
     //parse tile set from incoming prop and puts it into a state variable
     //Can chain together characters using brackets, Ex: "[Qu]" yields a "Qu" tile
     getTileSet(tileSet){
@@ -80,8 +81,14 @@ class TileManager extends Component {
     render(){
         return(
             <div>
-                <TileRack rackSize={this.props.rackSize} tileValues={this.state.currentStates}/>
+                <div>
+                    <TileTracker tileSet={this.state.tileSet}/>
+                </div>
+                <div>
+                    <TileRack rackSize={this.props.rackSize} tileValues={this.state.currentStates}/>
+                </div>
             </div>
+            
         )
     }
     

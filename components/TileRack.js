@@ -27,7 +27,7 @@ class TileRack extends Component {
         this.setState({tileRack : rack})
     }
 
-    //set tile rack to render to the specified height and width when GameBoard mounts
+    //set tile rack to render to the specified length when GameBoard mounts
     componentWillMount() {
         this.setTileValues()
     }

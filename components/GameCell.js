@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './component-styles.css';
-import {warn, warnString} from './constants';
+import {WARN, WARN_STRING} from './constants';
 
 //a single game cell on the game board
 //props: current cell value, max stored states
@@ -25,8 +25,8 @@ class GameCell extends Component {
             this.props.changeCellState(coords[0], coords[1], newState);
             this.setState({currentStates: update});
         }
-        else if(warn){
-            alert(warnString)
+        else if(WARN){
+            alert(WARN_STRING)
         }
     }
 

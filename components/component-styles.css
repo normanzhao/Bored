@@ -4,8 +4,8 @@
 .GameBoard{
     border: 7px solid #000000;
     margin: 5% auto 0 auto;
-    text-align: center;
     font-size: 18px;
+    text-align: center;
 }
 
 /*GameCells*/
@@ -21,6 +21,25 @@
 .TileRack{
     border: 7px solid #000000;
     margin: 5% auto 0 auto;
-    text-align: center;
     font-size: 18px;
+    text-align: center;
+}
+
+/*TileTracker*/
+.TileTracker{
+    position: absolute;
+    border: 5px solid #000000;
+    border-collapse: collapse;
+    right: 50px;
+    top: 200px;
+    text-align: left;
+    font-size: 18px;
+}
+
+/*TrackerCell*/
+.TrackerCell{
+    border: 3px solid #000000;
+    font-size: 18px;
+    padding: 2.5px 15px 2.5px 10px;
+    text-align: left;
 }
